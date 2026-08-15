@@ -71,25 +71,7 @@
 
 This template is part of a broader open-source ecosystem for production AI agents:
 
-| Project | Description | |
-|---------|-------------|---|
-| **[pydantic-deepagents](https://github.com/vstorm-co/pydantic-deepagents)** | The modular agent runtime for Python. Claude Code-style CLI with Docker sandbox, browser automation, multi-agent teams, and /improve. | [![Stars](https://img.shields.io/github/stars/vstorm-co/pydantic-deepagents?style=flat&logo=github&color=yellow)](https://github.com/vstorm-co/pydantic-deepagents) |
-| **[pydantic-ai-shields](https://github.com/vstorm-co/pydantic-ai-shields)** | Drop-in guardrails for Pydantic AI agents. 5 infra + 5 content shields. | [![Stars](https://img.shields.io/github/stars/vstorm-co/pydantic-ai-shields?style=flat&logo=github&color=yellow)](https://github.com/vstorm-co/pydantic-ai-shields) |
-| **[pydantic-ai-subagents](https://github.com/vstorm-co/pydantic-ai-subagents)** | Declarative multi-agent orchestration with token tracking. | [![Stars](https://img.shields.io/github/stars/vstorm-co/pydantic-ai-subagents?style=flat&logo=github&color=yellow)](https://github.com/vstorm-co/pydantic-ai-subagents) |
-| **[summarization-pydantic-ai](https://github.com/vstorm-co/pydantic-ai-summarization)** | Smart context compression for long-running agents. | [![Stars](https://img.shields.io/github/stars/vstorm-co/summarization-pydantic-ai?style=flat&logo=github&color=yellow)](https://github.com/vstorm-co/summarization-pydantic-ai) |
-| **[pydantic-ai-backend](https://github.com/vstorm-co/pydantic-ai-backend)** | Sandboxed execution for AI agents. Docker + Daytona. | [![Stars](https://img.shields.io/github/stars/vstorm-co/pydantic-ai-backend?style=flat&logo=github&color=yellow)](https://github.com/vstorm-co/pydantic-ai-backend) |
-
-> **Want the runtime behind this template's AI agents?** [pydantic-deepagents](https://github.com/vstorm-co/pydantic-deepagents) powers the `deepagents` framework option — install it standalone with `curl -fsSL .../install.sh | bash`.
-
-Browse all projects at [oss.vstorm.co](https://oss.vstorm.co)
-
----
-
 ## 🚀 Quick Start
-
-> [!TIP]
-> **Prefer a visual configurator?** Use the [Web Configurator](https://oss.vstorm.co/projects/full-stack-ai-agent-template/configurator/) to configure your project in the browser and download a ZIP — no CLI installation needed.
-
 ### Installation
 
 ```bash
@@ -713,7 +695,7 @@ They also ship a ready-to-use **`.claude/` toolkit** that adapts to the options 
 
 ### 🤖 AI/LLM First
 
-- **5 AI Frameworks** - [PydanticAI](https://ai.pydantic.dev), [PydanticDeep](https://github.com/vstorm-co/pydantic-deep), [LangChain](https://python.langchain.com), [LangGraph](https://langchain-ai.github.io/langgraph/), [DeepAgents](https://github.com/vstorm-co/pydantic-deepagents)
+
 - **4 LLM Providers** - OpenAI, Anthropic, Google Gemini, OpenRouter
 - **RAG** - Document ingestion, vector search, reranking (Milvus, Qdrant, ChromaDB, pgvector)
 - **WebSocket Streaming** - Real-time responses with full event access
@@ -979,16 +961,8 @@ async def agent_ws(websocket: WebSocket):
         })
 ```
 
-### Observability
 
-Each framework has its own observability solution:
 
-| Framework | Observability | Dashboard |
-|-----------|--------------|-----------|
-| **PydanticAI** | [Logfire](https://logfire.pydantic.dev) | Agent runs, tool calls, token usage |
-| **LangChain** | [LangSmith](https://smith.langchain.com) | Traces, feedback, datasets |
-
-See [AI Agent Documentation](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/ai-agent.md) for more.
 
 ---
 
@@ -1306,8 +1280,6 @@ fastapi-fullstack
 
 ### vs. Alternatives
 
-| Feature | **This Template** | [full-stack-fastapi-template](https://github.com/fastapi/full-stack-fastapi-template) | [create-t3-app](https://github.com/t3-oss/create-t3-app) |
-|---------|:-:|:-:|:-:|
 | **AI Agents** (5 frameworks) | ✅ | ❌ | ❌ |
 | **RAG Pipeline** (4 vector stores) | ✅ | ❌ | ❌ |
 | **WebSocket Streaming** | ✅ | ❌ | ❌ |
@@ -1332,8 +1304,7 @@ fastapi-fullstack
 
 <details>
 <summary><b>How is this different from full-stack-fastapi-template?</b></summary>
-
-[full-stack-fastapi-template](https://github.com/fastapi/full-stack-fastapi-template) by @tiangolo is a great starting point for FastAPI projects, but it focuses on traditional web apps. This template is purpose-built for **AI/LLM applications** — it adds AI agents (5 frameworks), RAG with 4 vector stores, WebSocket streaming, conversation persistence, LLM observability, and a Next.js chat UI out of the box.
+@tiangolo is a great starting point for FastAPI projects, but it focuses on traditional web apps. This template is purpose-built for **AI/LLM applications** — it adds AI agents (5 frameworks), RAG with 4 vector stores, WebSocket streaming, conversation persistence, LLM observability, and a Next.js chat UI out of the box.
 
 </details>
 
@@ -1346,8 +1317,6 @@ Yes. The AI agent and RAG modules are optional. You can use this as a pure FastA
 
 <details>
 <summary><b>What Python and Node.js versions are required?</b></summary>
-
-Python 3.11+ and Node.js 18+ (for the Next.js frontend). We recommend using [uv](https://docs.astral.sh/uv/) for Python and [bun](https://bun.sh) for the frontend.
 
 </details>
 
@@ -1367,65 +1336,6 @@ Yes. The LLM provider is configured via environment variables (`AI_MODEL`, `OPEN
 
 ---
 
-## 📚 Documentation
 
-| Document | Description |
-|----------|-------------|
-| [Architecture](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/architecture.md) | Repository + Service pattern, layered design |
-| [Frontend](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/frontend.md) | Next.js setup, auth, state management |
-| [AI Agent](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/ai-agent.md) | PydanticAI, tools, WebSocket streaming |
-| [Observability](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/observability.md) | Logfire integration, tracing, metrics |
-| [Deployment](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/deployment.md) | Docker, Kubernetes, production setup |
-| [Development](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/development.md) | Local setup, testing, debugging |
-| [Changelog](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/docs/CHANGELOG.md) | Version history and release notes |
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=vstorm-co/full-stack-fastapi-nextjs-llm-template&type=date&legend=top-left)](https://www.star-history.com/#vstorm-co/full-stack-fastapi-nextjs-llm-template&type=date&legend=top-left)
-
----
-
-## 🙏 Inspiration
-
-This project is inspired by:
-
-- [full-stack-fastapi-template](https://github.com/fastapi/full-stack-fastapi-template) by @tiangolo
-- [fastapi-template](https://github.com/s3rius/fastapi-template) by @s3rius
-- [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices) by @zhanymkanov
-- Django's management commands system
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/CONTRIBUTING.md) for details.
-
-<a href="https://github.com/vstorm-co/full-stack-ai-agent-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=vstorm-co/full-stack-ai-agent-template" alt="Contributors" />
-</a>
-
----
-
-## 📄 License
-
-MIT License - see [LICENSE](https://github.com/vstorm-co/full-stack-ai-agent-template/blob/main/LICENSE) for details.
-
----
-
-<div align="center">
-
-### Need help implementing this in your company?
-
-<p>We're <a href="https://vstorm.co"><b>Vstorm</b></a> — an Applied Agentic AI Engineering Consultancy<br>with 30+ production AI agent implementations.</p>
-
-<a href="https://vstorm.co/contact-us/">
-  <img src="https://img.shields.io/badge/Talk%20to%20us%20%E2%86%92-0066FF?style=for-the-badge&logoColor=white" alt="Talk to us">
-</a>
-
-<br><br>
-
-Made with ❤️ by <a href="https://vstorm.co"><b>Vstorm</b></a>
 
 </div>
